@@ -1,0 +1,240 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;800&display=swap');
+/* estrutura da página */
+*{
+    margin: 0;
+    font-family: Cairo, candara;
+}
+.nav{
+    background-color: var(--c5);
+    border-bottom: 3px solid var(--c4);
+    gap: 1vw;
+    width: 100vw;
+    height: 10vh;
+    padding: 0vh 5vw 0vh 5vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+    box-shadow: 0.5px 0.5px 15px var(--c4);
+}
+.nav-info{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    margin-right: 10vw;
+}
+.nav-infoesq{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.nav-info div:hover{
+    scale: 1.2;
+    text-decoration: underline 2px var(--c1);
+}
+.dd{ 
+    width: 50vw;
+    margin: 0 auto;
+    padding-top: 10vh;
+}
+.caixacelular{
+    margin: auto;
+    width: 50vw;
+    text-align: center;
+    margin-top: 10vh;
+}
+:root{
+    --c1: #2d3142;
+    --c2: #bfc0c0;
+    --c3: white;
+    --c4: #ef8354;
+    --c5: #4f5d75; 
+}
+body{
+    background: var(--c1);
+    color: var(--c3);
+    color: white;
+}
+/* caixa */
+.box{
+    width: 50vw;
+    height: 29vh;
+    border: 5px solid var(--c4);
+    background-color: var(--c1);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    align-items: center;
+    padding: 1vh 0vw 1vh 0vw;
+    border-radius: 1vw 0vw 1vw 0vw;
+    margin-bottom: 10vw;
+}
+.interbox{
+    width: 45vw;
+    border: 2px solid #ac5834;
+    border-radius: 2vw 0vw 2vw 0vw;
+    background: var(--c5);
+    display: flex;
+    align-items: center;
+    padding: 1vw 1vh 1vw 1vh;
+    gap: 5vw;
+    font-size: 20pt;
+}
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 0.5vw;
+    background: #101117;
+    border-radius: 1vw 0vw 1vw 0vw;
+}
+::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 2vw 0vw 2vw 0vw;
+    width: 0.3vw;
+}
+/* Botão*/
+.material-symbols-outlined{
+    background: var(--c3);
+    color: var(--c4);
+    padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+    border-radius: 50vw;
+    position: fixed;
+    right: 2vw;
+    bottom: 1vw;
+    box-shadow: 5px 5px 30px black;
+}
+.caixacelular span{
+    text-decoration: line-through;
+}
+button{
+    background: var(--c4);
+    border: none;
+    padding: 2vh 2vw 2vh 2vw;
+    font-size: 15pt;
+}
+button:hover{
+    scale: 1.05;
+    box-shadow: 2px 2px 10px black;
+    background-color: #ef8354;
+}
+button:active{
+    scale: 0.9;
+}
+.material-symbols-outlined:hover{
+    scale: 1.2;
+}
+/* Link */
+a{
+    text-decoration: none;
+    color: white;
+}
+*::selection{
+    background: #ef8354;
+}
+/* Tabela */
+table, td, tr, th{
+    border: 2px solid var(--c4);
+    border-collapse: collapse;
+    padding: 1vh 2vw 1vh 2vw;
+}
+.caixacelular td{
+    text-align: justify;
+}
+table{
+    margin-bottom: 2vw;
+}
+/* Roda pé */
+footer{
+    background: var(--c5);
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 14pt;
+    padding: 2vh 0vw 2vh 0vw;
+}
+/* Tentando deixar o site responsivo:
+320px — 480px: dispositivos móveis.
+481px — 768px: iPads, tablets.
+769px — 1024px: telas pequenas, laptops.
+1025px — 1200px: desktops, telas grandes.
+1201px e acima — telas muito grandes, TVs. */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .dd{
+        width: 70vw;
+    }
+    .caixacelular{
+        width: 70vw;
+    }
+    .box{
+        width: 70vw;
+    }
+    .interbox{
+        width: 60vw;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px){
+   .caixacelular img{
+        max-width: 300px;
+   } 
+   .box img{
+        max-width: 70px;
+   }
+   .box{
+        width: 85vw;
+   }
+   .dd{
+        width: 90vw;
+   }
+   .caixacelular{
+        width: 90vw ;
+   }
+   .nav h1{
+        font-size: 10pt;
+   }
+   .nav img{
+        max-width: 40px;
+        max-height: 40px;
+   }
+   h3{
+        font-size: 10pt;
+   }
+   .interbox{
+        width: 70vw;
+   }
+}
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .caixacelular img{
+        max-width: 200px;
+    }
+    .box img{
+        max-width: 50px;
+    }
+    .box{
+        font-size: 1px;
+        width: 85vw;
+    }
+    h3{
+        font-size: 8pt;
+    }
+    .dd{
+        width: 90vw;
+    }
+    .interbox{
+        width: 70vw;
+        height: 15vh;
+    }
+    .nav-info{
+        display: none;
+    }
+    .caixacelular{
+        width: 90vw;
+    }
+    .nav h1{
+        font-size: 15pt;
+    }
+    .nav img{
+        max-width: 50px;
+        max-height: 50px;
+    }
+}
