@@ -153,6 +153,14 @@ footer{
     font-size: 14pt;
     padding: 2vh 0vw 2vh 0vw;
 }
+#imgAntutu{
+    float: left;
+    margin: 1vh 1vw 0vh 0vw;
+}
+#seta{
+    font-size: 3vw;
+    margin-left: 2vw;
+}
 /* Tentando deixar o site responsivo:
 320px — 480px: dispositivos móveis.
 481px — 768px: iPads, tablets.
